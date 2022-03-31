@@ -6,7 +6,7 @@ module.exports = defineConfig({
     allowedHosts: "all",
     proxy:{
         "/api":{
-            target: "http://node.jayeonapple.com"
+            target: process.env.VUE_APP_API_URL ||"http://node.jayeonapple.com"
         }
     }
 }  
